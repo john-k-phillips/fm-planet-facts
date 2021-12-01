@@ -1,0 +1,25 @@
+<header class="header">
+  <h1 class="logo">The Planets</h1>
+  <nav class="header-nav">
+    <button class="nav-btn" aria-label="toggle menu" aria-expanded="false">
+      <img
+        class="nav-icon"
+        src="../../assets/icon-hamburger.svg"
+        alt=""
+        aria-hidden="true"
+      />
+    </button>
+    <div class="nav-content">
+      <ul class="planet-list hidden">
+        <li
+          class="planet-list-item"
+          *ngFor="let planet of planets"
+          [ngClass]="planet.toLowerCase()"
+        >
+          <a href="">{{ planet }}</a>
+          <img src="../../assets/icon-chevron.svg" alt="" aria-hidden="true" />
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
