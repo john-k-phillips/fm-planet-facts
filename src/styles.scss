@@ -25,10 +25,28 @@ h1,
 h2 {
   font-family: $font-antonio;
   font-family: 500;
+  text-transform: uppercase;
 }
 
 h3,
 h4 {
   font-family: $font-spartan;
   font-weight: 700;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+ul,
+ol {
+  list-style: none;
+  li {
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
 }
