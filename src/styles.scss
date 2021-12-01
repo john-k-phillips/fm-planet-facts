@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Spartan:wght@400;700&display=swap");
+
+// FONTS
+$font-antonio: "Antonio", sans-serif;
+$font-spartan: "Spartan", sans-serif;
+
+// COLORS
+$clr-earth-light: #000;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("./assets/background-stars.svg"), #070724;
+  background-size: 250%;
+
+  font-family: $font-spartan;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+}
+
+h1,
+h2 {
+  font-family: $font-antonio;
+  font-family: 500;
+}
+
+h3,
+h4 {
+  font-family: $font-spartan;
+  font-weight: 700;
+}
