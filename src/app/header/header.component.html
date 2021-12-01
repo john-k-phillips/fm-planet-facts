@@ -9,13 +9,10 @@
         aria-hidden="true"
       />
     </button>
-    <div class="nav-content">
-      <ul class="planet-list hidden">
-        <li
-          class="planet-list-item"
-          *ngFor="let planet of planets"
-          [ngClass]="planet.toLowerCase()"
-        >
+    <div class="nav-content hidden">
+      <ul class="planet-list">
+        <li class="planet-list-item" *ngFor="let planet of planets">
+          <div class="rounded-div" [ngClass]="planet.toLowerCase()"></div>
           <a href="">{{ planet }}</a>
           <img src="../../assets/icon-chevron.svg" alt="" aria-hidden="true" />
         </li>
