@@ -10,6 +10,7 @@
   position: relative;
 }
 
+// MOBILE DROPDOWN MENU
 .nav-content {
   display: block;
 
@@ -20,17 +21,21 @@
   position: absolute;
   left: 0px;
   top: calc(100% + 2px);
+  // UL CONTENT
   .planet-list {
     display: flex;
     flex-direction: column;
+
     height: 90%;
     margin-top: 10%;
     .planet-list-item {
       display: flex;
       align-items: center;
+
       width: 80%;
       margin: auto;
       padding-bottom: 1.5em;
+
       border-bottom: 1px solid rgba(151, 151, 151, 30%);
       &:last-child {
         border-bottom: none;
@@ -39,12 +44,15 @@
         background-color: red;
         width: 20px;
         height: 20px;
-        border-radius: 100%;
+
         margin-right: 1em;
+        border-radius: 100%;
       }
       a {
         flex: 1;
+
         padding: 0.2em;
+
         text-transform: uppercase;
         font-weight: bold;
       }
