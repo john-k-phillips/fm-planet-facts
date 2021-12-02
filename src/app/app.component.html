@@ -1,2 +1,2 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<app-header (navToggle)="disableNav($event)"></app-header>
+<router-outlet *ngIf="!disableContent"></router-outlet>

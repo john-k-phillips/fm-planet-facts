@@ -1,4 +1,10 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  OnInit,
+  Output,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +15,8 @@ export class HeaderComponent implements OnInit {
   @ViewChild('navContent') navContent: any;
   @ViewChild('navBtn') navButton: any;
   @ViewChild('navImage') navImage: any;
+
+  @Output() navToggle = new EventEmitter<boolean>();
 
   navIsOpen = false;
   planets = [
@@ -28,6 +36,7 @@ export class HeaderComponent implements OnInit {
 
   onToggleClick() {
     this.navIsOpen = !this.navIsOpen;
+    this.navToggle.emit(this.navIsOpen);
     if (this.navIsOpen) {
       this.navImage.nativeElement.src = '../../assets/icon-hamburger-dark.svg';
       this.navContent.nativeElement.style.display = 'block';
