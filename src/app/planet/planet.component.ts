@@ -8,10 +8,10 @@ import { PlanetService } from './planet.service';
   providers: [PlanetService],
 })
 export class PlanetComponent implements OnInit {
-  planet: {};
+  planet: any;
 
   constructor(private planetService: PlanetService) {
-    this.planet = planetService.getPlanet(0);
+    this.planet = this.planetService.getPlanet(0);
   }
 
   ngOnInit(): void {}
