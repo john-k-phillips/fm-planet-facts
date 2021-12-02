@@ -12,8 +12,12 @@
     <div class="nav-content hidden">
       <ul class="planet-list">
         <li class="planet-list-item" *ngFor="let planet of planets">
-          <div class="rounded-div" [ngClass]="planet.toLowerCase()"></div>
-          <a href="">{{ planet }}</a>
+          <div
+            class="rounded-div"
+            [ngClass]="planet.name.toLowerCase()"
+            [ngStyle]="{ 'background-color': planet.color }"
+          ></div>
+          <a href="">{{ planet.name }}</a>
           <img src="../../assets/icon-chevron.svg" alt="" aria-hidden="true" />
         </li>
       </ul>
