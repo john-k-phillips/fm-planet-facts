@@ -1,15 +1,21 @@
 <header class="header">
   <h1 class="logo">The Planets</h1>
   <nav class="header-nav">
-    <button class="nav-btn" aria-label="toggle menu" aria-expanded="false">
+    <button
+      class="nav-btn"
+      aria-label="toggle menu"
+      aria-expanded="false"
+      #navBtn
+    >
       <img
         class="nav-icon"
         src="../../assets/icon-hamburger.svg"
         alt=""
         aria-hidden="true"
+        (click)="onToggleClick()"
       />
     </button>
-    <div class="nav-content hidden">
+    <div class="nav-content hidden" #navContent>
       <ul class="planet-list">
         <li class="planet-list-item" *ngFor="let planet of planets">
           <div
