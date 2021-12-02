@@ -3,8 +3,9 @@
   <nav class="header-nav">
     <button
       class="nav-btn"
-      aria-label="toggle menu"
+      aria-label="Toggle mobile menu navigation"
       aria-expanded="false"
+      (click)="onToggleClick()"
       #navBtn
     >
       <img
@@ -12,18 +13,19 @@
         src="../../assets/icon-hamburger.svg"
         alt=""
         aria-hidden="true"
-        (click)="onToggleClick()"
+        #navImage
       />
     </button>
-    <div class="nav-content hidden" #navContent>
+    <div class="nav-content" #navContent>
       <ul class="planet-list">
         <li class="planet-list-item" *ngFor="let planet of planets">
           <div
             class="rounded-div"
-            [ngClass]="planet.name.toLowerCase()"
             [ngStyle]="{ 'background-color': planet.color }"
           ></div>
-          <a href="">{{ planet.name }}</a>
+          <a tabindex="0" [ngClass]="planet.name.toLowerCase()">{{
+            planet.name
+          }}</a>
           <img src="../../assets/icon-chevron.svg" alt="" aria-hidden="true" />
         </li>
       </ul>

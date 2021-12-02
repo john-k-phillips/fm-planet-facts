@@ -8,6 +8,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 export class HeaderComponent implements OnInit {
   @ViewChild('navContent') navContent: any;
   @ViewChild('navBtn') navButton: any;
+  @ViewChild('navImage') navImage: any;
 
   navIsOpen = false;
   planets = [
@@ -28,6 +29,7 @@ export class HeaderComponent implements OnInit {
   onToggleClick() {
     this.navIsOpen = !this.navIsOpen;
     if (this.navIsOpen) {
+      this.navImage.nativeElement.src = '../../assets/icon-hamburger-dark.svg';
       this.navContent.nativeElement.style.display = 'block';
       this.navContent.nativeElement.style.zIndex = '-1';
       setTimeout(() => {
@@ -37,6 +39,7 @@ export class HeaderComponent implements OnInit {
     } else {
       this.navContent.nativeElement.style.transform = 'translateY(-110%)';
       this.navButton.nativeElement.ariaExpanded = 'false';
+      this.navImage.nativeElement.src = '../../assets/icon-hamburger.svg';
       setTimeout(() => {
         this.navContent.nativeElement.style.display = 'none';
         this.navContent.nativeElement.style.zIndex = '0';

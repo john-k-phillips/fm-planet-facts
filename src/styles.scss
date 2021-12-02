@@ -13,7 +13,7 @@ $font-spartan: "Spartan", sans-serif;
 
 body {
   background: url("./assets/background-stars.svg"), #070724;
-  background-size: 250%;
+  background-size: 100%;
 
   font-family: $font-spartan;
   font-weight: 400;
@@ -36,7 +36,6 @@ h4 {
 
 button {
   border: none;
-  outline: none;
   background-color: transparent;
 }
 
