@@ -29,15 +29,17 @@ export class HeaderComponent implements OnInit {
     this.navIsOpen = !this.navIsOpen;
     if (this.navIsOpen) {
       this.navContent.nativeElement.style.display = 'block';
+      this.navContent.nativeElement.style.zIndex = '-1';
       setTimeout(() => {
         this.navContent.nativeElement.style.transform = 'translateY(0px)';
         this.navButton.nativeElement.ariaExpanded = 'true';
-      }, 100);
+      }, 300);
     } else {
       this.navContent.nativeElement.style.transform = 'translateY(-110%)';
       this.navButton.nativeElement.ariaExpanded = 'false';
       setTimeout(() => {
         this.navContent.nativeElement.style.display = 'none';
+        this.navContent.nativeElement.style.zIndex = '0';
       }, 600);
     }
   }
