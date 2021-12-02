@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+
 import { PlanetService } from './planet.service';
 
 @Component({
@@ -10,8 +12,13 @@ import { PlanetService } from './planet.service';
 export class PlanetComponent implements OnInit {
   planet: any;
 
-  constructor(private planetService: PlanetService) {
-    this.planet = this.planetService.getPlanet(0);
+  constructor(
+    private planetService: PlanetService,
+    private activeRoute: ActivatedRoute
+  ) {
+    this.activeRoute.params.subscribe((params: Params) => {
+      this.planet = this.planetService.getPlanet(+params['id']);
+    });
   }
 
   ngOnInit(): void {}

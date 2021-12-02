@@ -18,14 +18,20 @@
     </button>
     <div class="nav-content" #navContent>
       <ul class="planet-list">
-        <li class="planet-list-item" *ngFor="let planet of planets">
+        <li
+          class="planet-list-item"
+          *ngFor="let planet of planets; let i = index"
+        >
           <div
             class="rounded-div"
             [ngStyle]="{ 'background-color': planet.color }"
           ></div>
-          <a tabindex="0" [ngClass]="planet.name.toLowerCase()">{{
-            planet.name
-          }}</a>
+          <a
+            tabindex="0"
+            [routerLink]="['/planets', i.toString(), planet.name.toLowerCase()]"
+            [ngClass]="planet.name.toLowerCase()"
+            >{{ planet.name }}</a
+          >
           <img src="../../assets/icon-chevron.svg" alt="" aria-hidden="true" />
         </li>
       </ul>
