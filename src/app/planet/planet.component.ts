@@ -11,12 +11,14 @@ import { PlanetService } from './planet.service';
 })
 export class PlanetComponent implements OnInit {
   planet: any;
+  currentTab = '';
   constructor(
     private planetService: PlanetService,
     private activeRoute: ActivatedRoute
   ) {
     this.activeRoute.params.subscribe((params: Params) => {
       this.planet = this.planetService.getPlanet(+params['id']);
+      this.currentTab = this.planetService.currentTab;
     });
   }
 

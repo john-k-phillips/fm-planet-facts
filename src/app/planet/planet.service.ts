@@ -224,6 +224,8 @@ export class PlanetService {
     },
   ];
 
+  currentTab = 'overview';
+
   constructor() {}
 
   getPlanet(id: number) {

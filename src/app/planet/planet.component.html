@@ -13,10 +13,10 @@
   <section class="planet-details">
     <h2 class="planet-title">{{ planet.name }}</h2>
     <p class="planet-content">
-      {{ planet.overview.content }}
+      {{ planet[currentTab].content }}
     </p>
     <p class="source">
-      Source: <a href="{{ planet.overview.source }}">Wikipedia</a>
+      Source: <a href="{{ planet[currentTab].source }}">Wikipedia</a>
     </p>
   </section>
 
