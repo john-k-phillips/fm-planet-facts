@@ -2,11 +2,41 @@
   <!-- SUB NAV -->
   <app-sub-nav></app-sub-nav>
   <!-- PLANET IMAGE & DETAILS  -->
-  <img
-    class="planet-image"
-    src="../{{ planet.images.planet }}"
-    alt="{{ planet.name }}"
-  />
+  <div class="planet-image-container">
+    <img
+      class="planet-image"
+      src="../{{ planet.images.planet }}"
+      alt="{{ planet.name }}"
+    />
+  </div>
+
+  <section class="planet-details">
+    <h2 class="planet-title">{{ planet.name }}</h2>
+    <p class="planet-content">
+      {{ planet.overview.content }}
+    </p>
+    <p class="source">
+      Source: <a href="{{ planet.overview.source }}">Wikipedia</a>
+    </p>
+  </section>
 
   <!-- PLANET FACTS -->
+  <ul class="planet-facts">
+    <li class="fact-container">
+      <h4 class="fact">Rotation Time</h4>
+      <span class="value">{{ planet.rotation }}</span>
+    </li>
+    <li class="fact-container">
+      <h4 class="fact">Revolution Time</h4>
+      <span class="value">{{ planet.revolution }}</span>
+    </li>
+    <li class="fact-container">
+      <h4 class="fact">Radius</h4>
+      <span class="value">{{ planet.radius }}</span>
+    </li>
+    <li class="fact-container">
+      <h4 class="fact">Average Temp.</h4>
+      <span class="value">{{ planet.temperature }}</span>
+    </li>
+  </ul>
 </div>
