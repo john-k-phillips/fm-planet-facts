@@ -13,6 +13,8 @@ export class PlanetComponent implements OnInit {
   planet: any;
   currentTab = '';
   currentPlanetId = 0;
+  currentImage = 'planet';
+  displayGeology = false;
 
   constructor(
     private planetService: PlanetService,
@@ -21,6 +23,24 @@ export class PlanetComponent implements OnInit {
     this.activeRoute.params.subscribe((params: Params) => {
       this.planet = this.planetService.getPlanet(+params['id']);
       this.currentTab = this.planetService.currentTab;
+      switch (this.currentTab) {
+        case 'overview':
+          this.currentImage = 'planet';
+          this.displayGeology = false;
+          break;
+        case 'structure':
+          this.currentImage = 'internal';
+          this.displayGeology = false;
+          break;
+        case 'geology':
+          this.currentImage = 'planet';
+          this.displayGeology = true;
+          break;
+        default:
+          'planet';
+          this.displayGeology = false;
+          break;
+      }
     });
   }
 

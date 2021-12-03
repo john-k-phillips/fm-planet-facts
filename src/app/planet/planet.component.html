@@ -5,8 +5,14 @@
   <div class="planet-image-container">
     <img
       class="planet-image"
-      src="../{{ planet.images.planet }}"
+      src="../{{ planet.images[currentImage] }}"
       alt="{{ planet.name }}"
+    />
+    <img
+      *ngIf="displayGeology"
+      class="planet-surface-image"
+      src="../{{ planet.images.geology }}"
+      alt="Surface of planet"
     />
   </div>
 
