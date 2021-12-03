@@ -17,7 +17,6 @@ export class PlanetComponent implements OnInit {
   ) {
     this.activeRoute.params.subscribe((params: Params) => {
       this.planet = this.planetService.getPlanet(+params['id']);
-      console.log(this.planet.images.planet);
     });
   }
 
