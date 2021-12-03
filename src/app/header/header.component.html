@@ -28,7 +28,12 @@
           ></div>
           <a
             tabindex="0"
-            [routerLink]="['/planets', i.toString(), planet.name.toLowerCase()]"
+            [routerLink]="[
+              '/planets',
+              i.toString(),
+              planet.name.toLowerCase(),
+              'overview'
+            ]"
             [ngClass]="planet.name.toLowerCase()"
             >{{ planet.name }}</a
           >

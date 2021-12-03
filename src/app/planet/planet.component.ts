@@ -12,6 +12,8 @@ import { PlanetService } from './planet.service';
 export class PlanetComponent implements OnInit {
   planet: any;
   currentTab = '';
+  currentPlanetId = 0;
+
   constructor(
     private planetService: PlanetService,
     private activeRoute: ActivatedRoute

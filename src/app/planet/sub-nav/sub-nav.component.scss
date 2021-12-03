@@ -41,3 +41,12 @@
     }
   }
 }
+
+.active {
+  opacity: 1;
+  a {
+    &::after {
+      opacity: 1;
+    }
+  }
+}

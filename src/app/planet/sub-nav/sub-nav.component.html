@@ -1,13 +1,31 @@
 <nav class="sub-nav">
   <ul class="sub-nav-list">
-    <li class="sub-nav-item overview mercury active">
-      <a tabindex="0" [ngClass]="planetName">Overview</a>
+    <li class="sub-nav-item" routerLinkActive="active">
+      <a
+        tabindex="0"
+        [routerLink]="['/planets', id.toString(), planetName, 'overview']"
+        [ngClass]="planetName"
+      >
+        Overview
+      </a>
     </li>
-    <li class="sub-nav-item structure">
-      <a tabindex="0" [ngClass]="planetName">Structure</a>
+    <li class="sub-nav-item" routerLinkActive="active">
+      <a
+        tabindex="0"
+        [routerLink]="['/planets', id.toString(), planetName, 'structure']"
+        [ngClass]="planetName"
+      >
+        Structure
+      </a>
     </li>
-    <li class="sub-nav-item surface">
-      <a tabindex="0" [ngClass]="planetName">Surface</a>
+    <li class="sub-nav-item" routerLinkActive="active">
+      <a
+        tabindex="0"
+        [routerLink]="['/planets', id.toString(), planetName, 'geology']"
+        [ngClass]="planetName"
+      >
+        Surface
+      </a>
     </li>
   </ul>
 </nav>

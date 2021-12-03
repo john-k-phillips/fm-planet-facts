@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { PlanetService } from '../planet.service';
 
 @Component({
   selector: 'app-sub-nav',
@@ -6,9 +7,13 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./sub-nav.component.scss'],
 })
 export class SubNavComponent implements OnInit {
-  @Input() planetName = 'earth';
+  planetName = 'earth';
+  id: number;
 
-  constructor() {}
+  constructor(private planetService: PlanetService) {
+    this.id = this.planetService.currentId;
+    this.planetName = this.planetService.currentPlanet;
+  }
 
   ngOnInit(): void {}
 }

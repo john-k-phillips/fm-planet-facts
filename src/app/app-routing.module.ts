@@ -5,11 +5,10 @@ import { PlanetComponent } from './planet/planet.component';
 
 const routes: Routes = [
   {
-    path: 'planets/:id',
+    path: 'planets/:id/:name/:tab',
     component: PlanetComponent,
-    children: [{ path: ':name', component: PlanetComponent }],
   },
-  { path: '**', redirectTo: 'planets/2/earth' },
+  { path: '**', redirectTo: 'planets/2/earth/overview' },
 ];
 
 @NgModule({

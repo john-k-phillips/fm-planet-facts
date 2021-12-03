@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Injectable()
 export class PlanetService {
@@ -225,10 +226,18 @@ export class PlanetService {
   ];
 
   currentTab = 'overview';
+  currentId = 2;
+  currentPlanet = 'earth';
 
-  constructor() {}
+  constructor(private activeRoute: ActivatedRoute) {
+    this.activeRoute.params.subscribe((params: Params) => {
+      this.currentTab = params['tab'];
+      this.currentPlanet = params['name'];
+    });
+  }
 
   getPlanet(id: number) {
+    this.currentId = id;
     return this.planets[id];
   }
 }
