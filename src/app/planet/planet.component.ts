@@ -11,13 +11,13 @@ import { PlanetService } from './planet.service';
 })
 export class PlanetComponent implements OnInit {
   planet: any;
-
   constructor(
     private planetService: PlanetService,
     private activeRoute: ActivatedRoute
   ) {
     this.activeRoute.params.subscribe((params: Params) => {
       this.planet = this.planetService.getPlanet(+params['id']);
+      console.log(this.planet.images.planet);
     });
   }
 
