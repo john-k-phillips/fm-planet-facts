@@ -6,7 +6,9 @@
 .planet-image-container {
   display: grid;
   place-items: center;
+
   margin-top: 4em;
+
   position: relative;
 }
 .planet-image {
@@ -16,6 +18,7 @@
 .planet-surface-image {
   width: 30%;
   max-width: 200px;
+
   position: absolute;
   top: 50%;
 }
@@ -23,6 +26,7 @@
 // PLANET DETAILS
 .planet-details {
   margin-top: 5em;
+
   text-align: center;
   font-size: 11px;
 }
@@ -34,13 +38,15 @@
 
 .planet-content {
   width: 85%;
-  line-height: 2em;
   margin: 1em auto;
+
+  line-height: 2em;
   opacity: 0.8;
 }
 
 .source {
   margin-top: 2em;
+
   opacity: 0.6;
   a {
     font-weight: bold;
@@ -50,24 +56,26 @@
 
 // PLANET FACTS
 .planet-facts {
-  margin: 2em auto;
-  width: 100%;
-
   display: flex;
   flex-direction: column;
   gap: 0.5em;
+
+  margin: 2em auto;
   width: 85%;
 }
 
 .fact-container {
-  border: 2px solid rgba(151, 151, 151, 30%);
-  padding: 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  padding: 1em;
+
+  border: 2px solid rgba(151, 151, 151, 30%);
   .fact {
     text-transform: uppercase;
     font-size: 0.8em;
+
     opacity: 0.6;
   }
   .value {
