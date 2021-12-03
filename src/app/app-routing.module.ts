@@ -4,7 +4,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { PlanetComponent } from './planet/planet.component';
 
 const routes: Routes = [
-  { path: 'planets/:id/:name', component: PlanetComponent },
+  {
+    path: 'planets/:id',
+    component: PlanetComponent,
+    children: [{ path: ':name', component: PlanetComponent }],
+  },
   { path: '**', redirectTo: 'planets/2/earth' },
 ];
 
