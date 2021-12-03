@@ -49,3 +49,46 @@ ol {
     }
   }
 }
+
+// PLANET COLORS
+
+.mercury {
+  &::after {
+    background-color: #419ebb;
+  }
+}
+.venus {
+  &::after {
+    background-color: #eda249;
+  }
+}
+.earth {
+  &::after {
+    background-color: #6d2ed5;
+  }
+}
+.mars {
+  &::after {
+    background-color: #d14c32;
+  }
+}
+.jupiter {
+  &::after {
+    background-color: #d83a34;
+  }
+}
+.saturn {
+  &::after {
+    background-color: #cd5120;
+  }
+}
+.uranus {
+  &::after {
+    background-color: #1ec1a2;
+  }
+}
+.neptune {
+  &::after {
+    background-color: #2d68f0;
+  }
+}
